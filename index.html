@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant - Best Food in Town</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                🍽️ Delicious Restaurant
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="assets/order.html">My Order</a></li>
+                <li><a href="assets/favorites.html">Favorites</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="assets/favorites.html" class="icon-btn" title="Favorites">
+                    ❤️
+                    <span class="badge" id="favorites-count">0</span>
+                </a>
+                <a href="assets/order.html" class="icon-btn" title="My Order">
+                    🛒
+                    <span class="badge" id="order-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-slider" id="home">
+        <div class="slide slide1 active">
+            <div class="slide-content">
+                <h2>Welcome to Delicious Restaurant</h2>
+                <p>Experience the finest cuisine with fresh ingredients</p>
+                <a href="#menu" class="btn">View Menu</a>
+            </div>
+        </div>
+        <div class="slide slide2">
+            <div class="slide-content">
+                <h2>Fresh Daily Specials</h2>
+                <p>Try our chef's special dishes made with love</p>
+                <a href="#menu" class="btn">Order Now</a>
+            </div>
+        </div>
+        <div class="slide slide3">
+            <div class="slide-content">
+                <h2>Fast Delivery</h2>
+                <p>Hot and fresh food delivered to your doorstep</p>
+                <a href="#menu" class="btn">Start Ordering</a>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <span class="slider-dot active" onclick="currentSlide(1)"></span>
+            <span class="slider-dot" onclick="currentSlide(2)"></span>
+            <span class="slider-dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section class="menu-categories">
+        <div class="container">
+            <div class="categories-nav">
+                <button class="category-btn active" onclick="filterMenu('all')">All Items</button>
+                <button class="category-btn" onclick="filterMenu('appetizers')">Appetizers</button>
+                <button class="category-btn" onclick="filterMenu('mains')">Main Courses</button>
+                <button class="category-btn" onclick="filterMenu('desserts')">Desserts</button>
+                <button class="category-btn" onclick="filterMenu('drinks')">Drinks</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <h2 class="section-title">Our Menu</h2>
+            <div class="menu-grid" id="menu-grid">
+            </div>
+        </div>
+    </section>
+    <section class="restaurant-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>🕒 Opening Hours</h3>
+                    <p>Monday - Sunday<br>11:00 AM - 11:00 PM<br>Kitchen closes at 10:30 PM</p>
+                </div>
+                <div class="info-item">
+                    <h3>📍 Location</h3>
+                    <p>123 Food Street<br>Downtown City<br>Call: (555) 123-4567</p>
+                </div>
+                <div class="info-item">
+                    <h3>🚚 Delivery</h3>
+                    <p>Free delivery over $25<br>30-45 minutes<br>Delivery area: 5 miles</p>
+                </div>
+                <div class="info-item">
+                    <h3>👨‍🍳 Our Chef</h3>
+                    <p>Award-winning cuisine<br>20+ years experience<br>Fresh ingredients daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="contact-section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form" onsubmit="handleContact(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delicious Restaurant</h3>
+                    <p>Serving the finest cuisine with passion and dedication. Your satisfaction is our priority.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="order.html">My Order</a></li>
+                        <li><a href="favorites.html">Favorites</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li>📞 (555) 123-4567</li>
+                        <li>📧 info@deliciousrestaurant.com</li>
+                        <li>📍 123 Food Street, Downtown</li>
+                        <li>🕒 11:00 AM - 11:00 PM</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delicious Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+
+</body>
+
+</html>

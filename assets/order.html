@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Order - Delicious Restaurant</title>
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                🍽️ Delicious Restaurant
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#menu">Menu</a></li>
+                <li><a href="order.html">My Order</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+            </ul>
+            <div class="nav-icons">
+                <a href="favorites.html" class="icon-btn">
+                    ❤️
+                    <span class="badge" id="favorites-count">0</span>
+                </a>
+                <a href="order.html" class="icon-btn">
+                    🛒
+                    <span class="badge" id="order-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="order-section">
+        <div class="container">
+            <h1 class="page-title">My Order</h1>
+            <div id="order-content">
+            </div>
+        </div>
+    </section>
+
+    <script src="order.js"></script>
+</body>
+
+</html>
